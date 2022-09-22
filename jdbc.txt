@@ -1,0 +1,128 @@
+Insert Querry
+**************
+
+package ary1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Connection conn= null;
+		try {
+
+	        Class.forName("com.mysql.cj.jdbc.Driver");
+	        conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/abc", "root", "123456");
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter student name :");
+			String name = sc.nextLine();
+			System.out.println("Enter student marks :");
+			int numbers = sc.nextInt();
+			
+			String query = "INSERT INTO Student VALUES (?,?)";
+			
+			PreparedStatement preparedStmt = conn.prepareStatement(query);
+			
+			preparedStmt.setString(1, name);
+			preparedStmt.setInt(2, numbers);
+			
+			preparedStmt.execute();
+			
+			conn.close();
+			
+			
+		}
+        catch (Exception e) {
+            
+            e.printStackTrace();
+          }
+        
+
+	}
+
+}
+
+***********************************
+Delete Querry
+
+package ary1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Connection conn= null;
+		try {
+
+	        Class.forName("com.mysql.cj.jdbc.Driver");
+	        conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/abc", "root", "123456");
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter student name :");
+			String name = sc.nextLine();
+
+			
+		
+			String query = "Delete from Student where name=?";
+			
+			PreparedStatement preparedStmt = conn.prepareStatement(query);
+			
+			preparedStmt.setString(1, name);
+
+			
+			preparedStmt.execute();
+			
+			conn.close();
+			
+			
+		}
+        catch (Exception e) {
+            
+            e.printStackTrace();
+          }
+        
+
+	}
+
+}
+
+********************
+Update querry
+
+package ary1;
+import java.sql.*;
+import java.util.*;
+public class Update {
+
+	public static void main(String[] args) {
+		Connection conn = null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/abc","root","123456");
+			Scanner sc = new Scanner(System.in);
+			String name = sc.nextLine();
+			int marks = sc.nextInt();
+			
+			String query = "update Student set score = ? where name=?";
+			PreparedStatement stm = conn.prepareStatement(query);
+			
+			stm.setInt(1, marks);
+			stm.setString(2,name);
+			
+			stm.executeUpdate();			
+			
+		}catch(Exception e ) {
+			e.printStackTrace();
+		}
+	}
+	
+}
+

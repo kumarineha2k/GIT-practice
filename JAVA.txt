@@ -1,0 +1,1506 @@
+import java.util.Scanner;
+class Main
+{
+    public static void main (String[] args)
+    {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the number: ");
+            int num = sc.nextInt();
+            
+            int cube = num*num*num;
+            
+            System.out.println(cube);
+         
+    }
+}
+
+
+-----------------------------------
+
+import java.util.Scanner;
+class Main
+{
+    public static void main (String[] args)
+    {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter price: ");
+            Double pr = sc.nextDouble();
+            if (pr<=1000)
+            {System.out.println("discount:"+pr*0.05);
+            System.out.println("total price:"+(pr-pr*0.05));}
+            else if (pr>1000 & pr<=4000)
+            {System.out.println("discount:"+pr*0.10);
+            System.out.println("price:"+(pr-pr*0.10));
+            }
+            else
+            {System.out.println("discount:"+pr*0.15);
+            System.out.println("total price:"+(pr-pr*0.15));}
+            
+         
+    }
+}
+
+----------------------------------
+
+import java.util.Scanner;
+class Main
+{
+    public static void main (String[] args)
+    {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter numbers: ");
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            int c;
+            c=a>b?a:b;
+            System.out.println(c+" is greater");
+            
+         
+    }
+}
+
+
+-----------------------------------------
+import java.util.Scanner;
+class Main
+{
+    public static void main (String[] args)
+    {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter numbers: ");
+            int a=sc.nextInt();
+            int num=sc.nextInt();
+            int c;
+            switch(a)
+            {
+            
+            case 1:
+                System.out.println("square:"+num*num);
+                break;
+            case 2:
+                System.out.println("cube:"+num*num*num);
+                break;
+            case 3:
+                System.out.println("power of four:"+num*num*num*num);
+                break;
+            default:
+                System.out.println("invalid input:"+a);
+                break;
+            }
+         
+    }
+}
+
+
+-------------------------------------------------------
+import java.util.Scanner;
+class Main
+{
+    public static void main (String[] args)
+    {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a number: ");
+            int a=sc.nextInt();
+            for(int i=1;i<=a;i++)
+            System.out.print(i*2+" ");
+            
+            
+         
+    }
+}
+
+------------------------------------
+
+
+import java.util.Scanner;
+class Main
+{
+    public static void main (String[] args)
+    {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a number: ");
+            int a=sc.nextInt();
+            int i=1,fact=1;
+            for(i=1;i<=a;i++)
+            {
+            fact*=i;
+            }
+        
+            System.out.println(fact);
+         
+    }
+}
+
+----------------------------------------------------
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		double[] arr = new double[10];
+		int p=0,f=0,bl=0;
+		for(int i =0;i<10;i++)
+		{
+		    System.out.println("Enter marks for 10 Students: ");
+		    arr[i] = sc.nextDouble();
+		}
+
+
+		for(int i=0;i<10;i++)
+		{
+            if(arr[i]>=50)
+            {
+                p++;
+            }
+            else if(arr[i]>35 && arr[i]<=49)
+            {
+                bl++;
+            }else
+            {
+                f++;
+            }
+		}
+		
+		System.out.println("No of Students passed: " + p );
+		System.out.println("No of Failed Students: " + f );
+		System.out.println("No of Students with Backlogs: " + bl );
+
+	}
+}
+
+---------------------------------------------------------------
+import java.util.*;
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int []a=new int[5];
+        int i=0,f=0;
+        System.out.println("enter 5 numbers:");
+        for(i=0;i<a.length;i++)
+        a[i]=sc.nextInt();
+        System.out.println("enter key no:");
+        int num=sc.nextInt();
+        for(int j=0;j<a.length;j++)
+        {
+            if(num==a[j])
+            {
+                f=1;
+                break;
+                
+            }
+            else
+            f=0;
+        }
+        if (f==1)
+        System.out.println("yes");
+        else
+            System.out.println("no");
+        
+    }
+}
+
+-------------------------------------------------------------
+class HelloWorld {
+    public static void main(String[] args) {
+        int []a= {4,6,28,8,496,3};
+        int num;
+       
+       
+      int s=0;
+      for(int i=0;i<a.length;i++)
+      {
+          num=a[i];
+          
+          s=0;
+          for(int j=1;j<num;j++)
+          {
+              if(num%j==0)
+              {
+                  s=s+j;
+              }
+          }
+          if(s==num)
+          {
+              System.out.println(s);
+          }
+      }
+          
+          
+          
+          
+          
+      
+     
+        
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+    }
+}
+-----------------------------------------------------
+
+
+
+import java.util.*;
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int user[]={101,102,103,104};
+        int pass[]={111,222,333,444};
+        int f=0;
+        System.out.println("enter user name:");
+        int id=sc.nextInt();
+        System.out.println("enter password:");
+        int pwd=sc.nextInt();
+        for (int i=0;i<4;i++)
+        {
+    
+            if(user[i]==id)
+            {
+                if(pass[i]==pwd)
+                f=1;
+            
+            }
+            
+        }
+        if(f==1)
+        System.out.println("verified");
+        else
+        System.out.println("not verified");
+        }
+      
+        
+        
+}
+
+------------------------------------------------------------------
+13 SEP
+
+
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+		System.out.println("enter salary:");
+		double sal=sc.nextDouble();
+		double bonus;
+		if (sal<=5000)
+		bonus=0.05*sal;
+		else
+		bonus=0.10*sal;
+		System.out.println("bonus:"+bonus+" total salary:"+(sal+bonus));
+		
+	}
+}
+
+----------------------------------------------------
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+	    int [] m=new int[5];
+		System.out.println("enter marks of five:");
+		for (int i=0;i<5;i++)
+		m[i]=sc.nextInt();
+		int tot=0;
+        for(int i=0;i<5;i++)
+        {
+            tot+=m[i];
+        }
+        double avg=0;
+        char grade='F';
+        avg=tot/5;
+	    if(avg>=85)
+	    grade='A';
+	    else if(avg>=70 && avg<85)
+	    grade='B';
+	    else if(avg>=55 &&avg<70)
+	    grade='C';
+	    else if(avg>=33 && avg<55)
+	    grade='D';
+	    else
+	    System.out.println("fail!!!");
+	    System.out.println("grade:"+grade);
+	    
+		
+	}
+}
+-----------------------------------------------------------------
+
+
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+	    int ch=0;
+	    System.out.println("enter a number:");
+	    System.out.println("1. addition");
+	    System.out.println("2. subtraction");
+	    System.out.println("3. multiplication");
+	    ch=sc.nextInt();
+	    System.out.println("enter two numbers:");
+	    int a=sc.nextInt();
+	    int b=sc.nextInt();
+	    double result=0;
+        switch(ch)
+        {
+            case 1:
+                result=a+b;
+                break;
+            case 2:
+                result=a-b;
+                break;
+            case 3:
+                result=a*b;
+                break;
+            default:
+                System.out.println("invalid input");
+        }
+	    
+	System.out.println("result:"+result);	
+	}
+}
+
+
+----------------------------------------------------------
+
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+		System.out.println("enter salary:");
+		double sal=sc.nextDouble();
+		double bonus;
+		bonus=sal>=5000?(sal*0.10):(sal*0.05);
+
+		System.out.println("bonus:"+bonus+" total salary:"+(sal+bonus));
+		
+	}
+}
+-----------------------------------------------------------------
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+		System.out.println("enter number:");
+		int num=sc.nextInt();
+		int i=1,fact=1;
+		while(i<=num)
+		{
+		    fact=fact*i;
+		    i+=1;
+		}
+		System.out.println("factorial:"+fact);
+		
+	}
+}
+---------------------------------------------------------------
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+		System.out.println("enter number:");
+		int num=sc.nextInt();
+		int i=1,fact=1;
+		do
+		{
+		    fact=fact*i;
+		    i+=1;
+		}
+		while(i<=num);
+		System.out.println("factorial:"+fact);
+		
+	}
+}
+--------------------------------------------------import java.util.*;
+class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+		System.out.println("enter number:");
+		int num=sc.nextInt();
+		int i=1,sum=0;
+		while(i<=num/2)
+		{
+		    if( num%i==0)
+		    sum+=i;
+		    i+=1;
+		}
+		if( sum==num)
+		System.out.println(num+" is perfect");
+		else
+		System.out.println(num+" is not perfect");
+		
+	}
+}
+
+--------------------------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+
+	   String  a[]= new String [5];
+        String name;
+        System.out.println("enter a names ");
+        for(int i=0;i<5;i++)
+        {
+        
+        a[i]=sc.nextLine();
+        }   
+        System.out.println("who is a killer ?");
+        name=sc.nextLine();
+        
+        boolean present = false;
+        
+        for(int i=0;i<5;i++)
+        {
+        if(a[i].equals(name))
+        present = true;
+        }
+        
+        if(present)
+        System.out.println(name+" is present");
+        else
+        System.out.println("Ran out");
+
+	
+}
+}
+
+shivam.y.
+---------------------------------------------
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+	    String n[]= new String[5];
+	    int flag=0;
+		System.out.println("enter five boys names:");
+		for(int i=0;i<5;i++)
+		n[i]=sc.nextLine();
+		System.out.println("enter search name:");
+		String name;
+		name=sc.nextLine();
+		for(int j=0;j<5;j++)
+		{
+		    if(n[j].equals(name))
+		    {
+		    flag=1;
+		    break;
+		    }
+		    
+		}
+		if (flag==1)
+		System.out.println("match found");
+		else
+		System.out.println("match not found");
+	}
+}
+---------------------------------------------------------------
+import java.util.*;
+class Main
+{
+    public static double bonus(double n)
+	    {
+	        
+	        return n*0.05;
+	    }
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+	    
+	    System.out.println("enter salary:");
+	    double sal=sc.nextDouble();
+	    double totbonus=bonus(sal);
+	    System.out.println("bonus:"+totbonus);
+	}
+}
+-------------------------------------------------------------
+
+import java.util.*;
+class Main
+{
+     public static void even(int a[])
+	    {
+	        
+	        for(int i=0;i<10;i++)
+	        {
+	            if (a[i]%2==0)
+	            
+	            System.out.print(a[i]+" ");
+	        }
+	           
+	    }      
+	     public static void odd(int a[])
+	    {
+	        
+	        for(int i=0;i<10;i++)
+	        {
+	            if (a[i]%2!=0)
+	            
+	            System.out.print(a[i]+" ");
+	        }
+	           
+	    } 
+
+ public static void perfect(int a[])
+	    {
+	        
+	        for(int i=0;i<10;i++)
+	        {
+	            int sum=0;
+	            for(int j=1;j<a[i];j++)
+	            {
+	            if (a[i]%j==0)
+	            sum=sum+j;
+	            
+	            }
+	            if(sum==a[i])
+	            System.out.print(a[i]+" ");
+	        }
+	           
+	    } 
+	   
+	   
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+	    int a[]=new int[10];
+	    System.out.println("enter 10 numbers:");
+	    for(int i=0;i<10;i++)
+	    a[i]=sc.nextInt();
+	    System.out.println("even numbers:");
+	    even(a);
+	    System.out.println();
+	    System.out.println("odd numbers:");
+	    odd(a);
+	    System.out.println();
+         perfect(a);
+	  
+	}
+}
+-----------------------------------------------------------
+
+
+
+import java.util.*;
+class Main
+{
+      
+	    
+	     public static int countVowel(String a)
+	    {
+	        int c=0;
+	        String []list=a.split(" ");
+	        for(int i=0;i<list.length;i++)
+	        {
+	            String temp=list[i];
+	            int size=temp.length();
+	            char end=temp.charAt(size-1);
+	            if (end=='a'||end=='e'||end=='i'||end=='o'||end=='u')
+	            c++;
+	        }
+	        return c;
+	           
+	    } 
+	   
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner (System.in);
+	    String a="rakul is goin to market";
+	    System.out.println("enter a sentence:");
+	    a=sc.nextLine();
+	    int res=countVowel(a);
+	    System.out.println("no of words ending with vowel:"+res);
+	    
+	    
+	  
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------14SEP
+import java.util.*;
+class shoes
+{
+   int p_id;
+   Double price ;
+   String brand;
+   String color;
+   String type;
+   int qty;
+   Double tot;
+   void input()
+   {
+         Scanner sc= new Scanner(System.in);
+        System.out.println("enter product id: ");
+        p_id=sc.nextInt();
+        System.out.println("enter brand:");
+        sc.nextLine();
+        brand=sc.nextLine();
+        System.out.println("enter price:");
+        price=sc.nextDouble();
+        System.out.println("enter color:");
+        sc.nextLine();
+        color=sc.nextLine();
+        System.out.println("enter type:");
+        type=sc.nextLine();
+        System.out.println("enter number of products purchased:");
+        qty=sc.nextInt();
+        
+   }
+   void tPrice()
+   {
+       tot=qty*price;
+       System.out.println("Total amount paid:"+tot);
+       
+   }
+   void show()
+   {
+        System.out.println("Brand:"+brand);
+        System.out.println("Type:"+type);
+        System.out.println("product id:"+p_id);
+        System.out.println("colour:"+color);
+        System.out.println("quantity:"+qty);
+          
+   }
+   
+   
+   
+   
+   
+}
+
+
+class Main 
+{
+    
+    p⁫ublic static void main(String[] args)
+    {
+       
+        shoes s1=new shoes();
+        s1.input();
+        s1.show();
+        s1.tPrice();
+        
+    }
+}
+
+-----------------------------------------------------------------
+CONSTRUCTOR
+import java.util.*;
+class shoes
+{
+   int p_id;
+   Double price ;
+   String brand;
+   String color;
+   String type;
+   int qty;
+   Double tot;
+   shoes()
+   {
+       p_id=000;
+       price=1000.00;
+       brand="default";
+       color="sky blue";
+       type="casual shoes";
+       qty=1;
+   }
+   shoes(int id,double pr,String clr, String ty,int qt,String br)
+   {
+       p_id=id;
+       price=pr;
+       color=clr;
+       type=ty;
+       qty=qt;
+       brand=br;
+   }
+   void input()
+   {
+         Scanner sc= new Scanner(System.in);
+        System.out.println("enter product id: ");
+        p_id=sc.nextInt();
+        System.out.println("enter brand:");
+        sc.nextLine();
+        brand=sc.nextLine();
+        System.out.println("enter price:");
+        price=sc.nextDouble();
+        System.out.println("enter color:");
+        sc.nextLine();
+        color=sc.nextLine();
+        System.out.println("enter type:");
+        type=sc.nextLine();
+        System.out.println("enter number of products purchased:");
+        qty=sc.nextInt();
+        
+   }
+   void tPrice()
+   {
+       tot=qty*price;
+       System.out.println("Total amount paid:"+tot);
+       
+   }
+   void show()
+   {
+        System.out.println("Brand:"+brand);
+        System.out.println("Type:"+type);
+        System.out.println("product id:"+p_id);
+        System.out.println("colour:"+color);
+        System.out.println("quantity:"+qty);
+          
+   }
+   
+   
+   
+   
+   
+}
+
+
+class Main 
+{
+    
+    p⁫ublic static void main(String[] args)
+    {
+       
+        shoes s1=new shoes(101,1000.00,"pink","casual",2,"adidas");
+        shoes s2=new shoes();
+       /* s1.input();*/
+        s1.show();
+        s1.tPrice();
+        s2.show();
+        s2.tPrice();
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+==============================================================
+-----------------------------------------------------------------------------
+INHERITANCE
+
+import java.util.*;
+class student
+{
+    int rno;
+    String name;
+    int cls;
+
+   void input()
+   {
+         Scanner sc= new Scanner(System.in);
+        System.out.println("enter roll no: ");
+        rno=sc.nextInt();
+        System.out.println("enter name:");
+        sc.nextLine();
+        name=sc.nextLine();
+        System.out.println("enter class:");
+        cls=sc.nextInt();
+       
+        
+   }
+   
+   void show()
+   {
+        System.out.println("name:"+name);
+        System.out.println("class:"+cls);
+        System.out.println("roll no:"+rno);
+   }
+}
+
+class result extends student
+{
+    int marks;
+    double per;
+    void input1()
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter marks: ");
+        marks=sc.nextInt();
+        System.out.println("enter %:");
+        per=sc.nextDouble();
+        
+    }
+    void show1()
+    {
+        System.out.println("marks:"+marks);
+        System.out.println("percentage:"+per);
+    }
+    
+    
+}
+   
+   
+   
+
+
+class Main 
+{
+    
+    p⁫ublic static void main(String[] args)
+    {
+       
+        result r1= new result();
+        r1.input();
+        r1.input1();
+        r1.show();
+        r1.show1();
+       
+        
+    }
+}
+
+===========================================================
+SHALU MAM
+
+import java.util.Scanner;
+class Student
+{
+
+    String Name;
+    int Age,id;
+     Student()
+     {
+         Name="asha";
+         Age=21;
+         id=101;
+         System.out.println("Student class constr......is calling...");
+     }
+     Student(String nm, int a, int i)
+     {
+         
+       Name=nm;
+       Age=a;
+       id=i;
+         
+     }
+     
+    void Input(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Your Name");
+        Name = sc.nextLine();
+        System.out.println("Enter your Age");
+        Age = sc.nextInt();
+        System.out.println("Enter your Id");
+        id = sc.nextInt();
+
+ 
+
+    }
+    void show(){
+        System.out.println("Name : "+Name);
+        System.out.println("Age : "+Age);
+        System.out.println("id : "+id);
+    }
+}
+
+ 
+
+class Result extends Student
+{
+    Double marks;
+    Result()
+    {
+        marks=600.9;
+        System.out.println("Result class cons.....call.....");
+    }
+    Result(Double m,String nm, int a, int i)
+    {
+           super(nm,a,i);
+        marks=m;
+    }
+    void Marks(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Total Marks out of 1000");
+        marks = sc.nextDouble() ;
+    }
+    void cal(){
+        Double percentage = (marks * 100)/1000;
+        System.out.println("Percentage = "+percentage);
+    }
+
+}
+
+ 
+
+class Main 
+{
+    public static void main(String[] args) {
+        Result r = new Result(9999.9,"asha",101,44);
+         r.show(); 
+          
+    }
+    
+}
+
+
+
+
+
+------------------------------------------------------------------
+OVERLOADING
+
+
+
+
+
+public class Main
+{
+   public static int volume(int a)
+    {
+        System.out.println("volume of cube:");
+        int c=a*a;
+        return (c);
+    }
+    
+   public static  int volume(int a, int b, int c)
+    {
+        System.out.println("volume of cuboid:");
+        int d=a*b*c;
+        return (d);
+    }
+    public static Double volume(Double  r, Double h)
+    {
+        System.out.println("volume of cylinder:");
+        Double c=3.14*r*r*h;
+        return (c);
+    }
+    public static void volume(double r)
+    {
+         System.out.println("volume of sphere:");
+        double p=1.33*(3.14*r*r*r);
+        System.out.println(p);
+    }
+    
+    
+    
+    
+    public static void main(String[] args) {
+        int k=volume(8,4,9);
+        System.out.println(k);
+        int l=volume(4);
+        System.out.println(l);
+        double m=volume(4.0,7.0);
+        System.out.println(m);
+        volume(5.5);
+    }
+}
+ ----------------------------------------------------------------
+
+SUPER KEYWORD
+
+
+
+import java.util.*;
+
+class Student
+{
+    int a;
+    Student()
+    {
+        a=10;
+    }
+    
+int rollNo;
+String name;
+String gender;
+
+void input(){
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter roll no: ");
+rollNo = sc.nextInt();
+
+System.out.print("Enter name: ");
+name = sc.next();
+
+System.out.print("Enter gender: ");
+gender = sc.next();
+
+}
+
+void show(){
+System.out.println("Roll no: "+rollNo);
+System.out.println("Name : "+name);
+        System.out.println("Gender: "+gender);
+}
+}
+
+class Result extends Student
+{
+    
+       int a;
+    
+    Result()
+    {
+        a=20;
+    }
+    void fun()
+    {
+       System.out.println(a);
+       System.out.println(super.a);
+       
+    }
+  void input(){
+      
+      
+      
+      
+      
+      
+System.out.println("input() from result class");
+  }
+  void show(){
+System.out.println("show() from result class");
+  }
+}
+
+class Main{
+    
+
+   public static void main(String[] args)
+{
+Result r = new Result();
+
+r.fun();
+
+
+}
+}
+------------------------------------
+
+FUNCTION OVERRIDING
+
+
+import java.util.*;
+class student
+{
+    int rno;
+    String name;
+    int cls;
+    
+    student()
+    {
+        name="shreya mohanty";
+        rno=8;
+        cls=10;
+        
+    }
+    void show(int r)
+    {
+        rno=r;
+        System.out.println("roll no:"+rno);
+        System.out.println("name:"+name);
+        System.out.println("class:"+cls);
+    }
+  
+}
+
+class result extends student
+{
+    int marks;
+    double per;
+    int cls;
+    String name;
+   
+    result()
+    {
+        name="shravya verma";
+        marks=100;
+        per=90;
+         cls=11;
+    }
+    void show()
+    {
+        System.out.println("roll no :"+super.rno);
+        System.out.println("name:"+name);
+        System.out.println("class:"+super.cls);
+        System.out.println("marks:"+marks);
+        System.out.println("percentage:"+per);
+    }
+    
+    
+}
+   
+   
+   
+
+
+class Main 
+{
+    
+    p⁫ublic static void main(String[] args)
+    {
+       
+        result r1= new result();
+        
+        r1.show();
+        r1.show(99);
+       
+        
+    }
+}
+=============================================================
+
+
+
+
+
+
+
+
+STACK
+import java.util.*;
+
+ 
+
+public class Main
+{
+    public static void main(String[] args) {
+        
+        Stack<Integer> sk =new Stack<Integer>();
+          sk.push(1);
+          sk.push(2);
+          sk.push(3);
+          sk.push(4);
+          sk.push(5);
+        if(sk.contains(5))
+        {
+                    System.out.println(" yes");
+
+ 
+
+            
+        }
+        
+        System.out.println(" "+sk.isEmpty());
+        System.out.println(" "+sk.size());
+        System.out.println(" "+sk.peek());
+            System.out.println(" "+sk);
+    }
+}
+
+==================================================
+REVERSE A STRING
+
+import java.util.*;
+
+ 
+
+public class Main
+{
+    public static void main(String[] args) {
+        
+        Stack<Character> sk =new Stack<Character>();
+        String str="welcome";
+        String out="";
+         
+        for(int i=0;i<str.length();i++)
+        {
+            sk.push(str.charAt(i));
+        }
+      
+        while(sk.size()>0)
+        {
+           out=out+sk.pop();
+        }
+        
+        System.out.println(out+ " ");
+        
+    }
+}
+ 
+ 
+========================================
+REVERSE A STRING ; SHIVAM
+
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Stack<Character> stack = new Stack<Character>();
+
+        String str = sc.nextLine();
+
+        for (int i = 0; i < str.length(); i++) {
+            stack.push(str.charAt(i));
+        }
+
+        String rev = "";
+
+        for (int i = 0; i < str.length(); i++)
+            rev += stack.pop();
+
+        System.out.println(rev);
+
+    }
+}
+===============================================================
+SETS
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        System.out.println("today's record:");
+        Set<String> arr = new HashSet<String>();
+          arr.add("aarav");
+          arr.add("shruti");
+          arr.add("shruti");
+          arr.add("neha");
+          arr.add("deepika");
+          arr.add("asha pareek");
+          arr.add("shree");
+          arr.add("shree");
+          arr.add("maishmita");
+          arr.add("neha");
+        
+        System.out.println(arr);
+        
+    }
+}
+======================================================================
+import java.util.*;
+
+ 
+
+public class Main
+{
+    public static void main(String[] args) {
+        
+        ArrayList<String> a1 = new ArrayList<String>();
+          a1.add("asha");
+          a1.add("pooja");
+          a1.add("kavita");
+          a1.add("deepa");
+        a1.remove("asha");
+        System.out.println(a1);
+        if(a1.contains("komal"))
+        {
+            
+                    System.out.println("yes");
+
+ 
+
+        }
+        else{
+                    System.out.println("No");
+
+ 
+
+        }
+       
+        
+    }
+}
+=========================================================
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Map<Integer,String> map=new HashMap<Integer,String>();
+       
+        map.put(101,"asha");
+        map.put(102,"asha");
+        map.put(103,"deepa");
+        map.put(103,"kavita");
+        map.put(105,"pooja");
+       
+       
+       
+       
+        System.out.println(" "+ map);
+    }
+=====================================================
+import java.util.*;
+class Main
+{
+    public static void main(String[] args) 
+    {
+        Map <String,String> map=new HashMap<String,String>();
+        System.out.println("historical places & location:");
+        map.put("taj mahal","agra");
+        map.put("golconda fort","hyderabad");
+        map.put("qutub minar","delhi");
+        map.put("india gate","delhi");
+        map.put("gateway of india","mumbai");
+        map.put("konark temple","odisha");
+        map.put("india gate","agra");
+       System.out.println(" "+ map);
+    }
+}
+===============================================================
+containsKey()
+import java.util.*;
+class Main
+{
+    public static void main(String[] args) 
+    {
+        Map <String,String> map=new HashMap<String,String>();
+        System.out.println("historical places & location:");
+        map.put("taj mahal","agra");
+        map.put("golconda fort","hyderabad");
+        map.put("qutub minar","delhi");
+        map.put("india gate","delhi");
+        map.put("gateway of india","mumbai");
+        map.put("konark temple","odisha");
+        map.put("india gate","agra");
+        if(map.containsKey("qutub minar"))
+       System.out.println(map.get("konark temple"));
+    }
+
+}
+
+
+============================================================
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		System.out.println("Hello World");
+		try 
+		{
+		    System.out.println("enter 2 nos:");
+		    int a =sc.nextInt();
+		    int b=sc.nextInt();
+		    int c=a/b;
+		    System.out.println("result:"+c);
+		} 
+		/*catch(Exception e) 
+		{
+		    		    System.out.println("error!!!!!!");
+
+		}*/
+		catch(ArithmeticException e)
+		{
+		    		    System.out.println(e);
+
+		}
+		finally
+		{
+		    System.out.println("exception is executed");
+		}
+	}
+}
+===============================
+SET counting:
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter cities:");
+		String cities = sc.nextLine();
+		String[] arr = cities.split(",");
+		
+		Set<String> city = new HashSet(); 
+		
+		for(int i=0;i<arr.length;i++){
+		    city.add(arr[i]);
+		}
+		System.out.println("No of cities " + city.size());
+		
+	}
+}
+=====================================================
+import java.util.*;
+class Main
+{
+    public static void main(String [] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String []cities={"delhi","mohali","shimla","gulmarg","chennai","vellore","wellington","chennai"};
+        Map<String,Integer> cityEmp = new HashMap<String,Integer>();
+        for(int i=0;i<cities.length;i++)
+        {
+            int count=0;
+        String city=cities[i];
+        for(int j=0;j<cities.length;j++)
+        {
+            if(city.equals(cities[j]))
+            count+=1;
+        }
+        cityEmp.put(city,count);
+        }
+        
+        System.out.println(cityEmp);
+    }
+    
+}
+OUTPUT:
+=====================================================
+import java.util.*;
+class Main
+{
+    public static void main(String []args)
+    {
+        
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter full name:");
+    String name=sc.nextLine();
+    String []fname=name.split(" ");
+    
+    System.out.println(fname[fname.length-1]);
+    
+     
+    }
+}
