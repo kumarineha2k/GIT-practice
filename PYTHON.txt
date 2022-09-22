@@ -1,0 +1,647 @@
+m1=int(input("enter marks:"))
+m2=int(input("enter marks:"))
+m3=int(input("enter marks:"))
+tot=m1+m2+m3
+avg=tot/3
+if avg>=90:
+    grade='A'
+elif avg>=80 or avg<90:
+    grade='B'
+elif avg>=70 or avg<80:
+    grade='C'
+else:
+    grade='D'
+print("grade:",grade)
+
+call=int(input("enter no of calls made:"))
+crg=0
+if(call>=1 and call<=100):
+    crg=0
+elif(call>100 and call<=200):  
+    crg=call*5
+    
+elif(call>200 and call<=300):
+    crg=500+(call-200)*4
+    
+elif(call>300 and call<=400):
+    crg=800+(call-300)*3
+    
+else:
+    crg=1200+(call-400)*2
+
+print("charges:",crg)
+
+
+n=int(input())
+print("odd sereis:")
+for i in range(1,n+1,2):
+  print(i)
+print("even sereis:")
+for i in range(2,n+1,2):
+  print(i)
+
+
+n=int(input())
+for i in range(1,11):
+    print(n,"*",i,"=",n*i)
+
+
+a=int(input())
+b=int(input())
+sum=0
+for i in range(a,b+1):
+   sum+=i
+print("sum is:",sum)
+
+a=int(input())
+b=int(input())
+sum=0
+for i in range(a,b+1):
+    if i%2==0:
+       sum+=i
+print("sum is:",sum)
+
+
+n=int(input())
+
+sum=0
+for i in range(1,n+1//2):
+    if n%i==0:
+      sum+=i
+if sum==n:
+   print(n," is perfect number")
+else:
+    print(n," is not perfect number")
+
+
+n=int(input())
+
+flag=0
+for i in range(2,n+1//2):
+    if n%i==0:
+      flag=1
+if flag==0:
+   print(n," is prime number")
+else:
+    print(n," is not prime number")
+
+
+
+
+n=int(input())
+fact=1
+i=1
+while i<=n:
+     fact*=i
+     i=i+1
+print(fact," is factorial number")
+
+
+
+n=int(input())
+sum=0
+i=1
+while i<=n//2:
+    if n%2==0:
+        sum+=i
+    i=i+1
+if sum==n:
+    print(n," is perfect number")
+else:
+    print(n," is not perfect number")
+
+
+
+for i in range(1,1000,1):
+    num=i
+    s=0
+    for j in range(1,num,1):
+        if(num%j==0):
+            s=s+j
+           
+    if(num==s):
+        print(num)
+       
+
+
+for n in range (100,200 + 1):  
+        for i in range (2, n):  
+            if (n % i) == 0:  
+                break  
+        else:  
+            print (n)
+       
+
+
+count=1
+for n in range (1,10000):  
+        for i in range (2, n):  
+            if (n % i) == 0:  
+                break  
+        else:  
+            print (n)
+            count+=1
+            if count==100:
+                 break
+      
+
+s=0
+n=2
+c=0
+while(True):
+    f=0
+    
+    
+    for i in range(2,n,1):
+        if(n%i==0):
+            f=1
+            
+            break
+    if(f==0):
+        print(n)
+        c=c+1
+    if(c==100):
+        break
+    n=n+1
+
+
+a='asha'
+b='pooja'
+while (True):
+    Id=input("enter id:")
+    pwd=input("enter password:")
+    if(a==Id) and (b==pwd):
+       print("verified")
+       break
+    else:
+        print("try again")
+        
+
+a='asha'
+b='pooja'
+count=0
+while (count<3):
+    Id=input("enter id:")
+    pwd=input("enter password:")
+    if(a==Id) and (b==pwd):
+       print("verified")
+       
+    else:
+       print("not verified")
+       count+=1
+      
+-----------------------       
+   
+7 sep//
+sum=0
+count=0
+while(True):
+    m=int(input("enter total marks:"))
+    if m>=75:
+        sum+=m
+        count+=1
+    if m==0:
+      break
+print("average of passing students:",sum/count)
+    
+-----------------------------
+
+l=[5,6,7]
+l.extend([44,55])
+print(l)
+l.insert(0,99)
+print(l)
+l.append(88)
+print(l)
+if 88 not in l:
+    print("yes")
+else:
+    print("no")
+
+----------------------------
+l=[3,6,7,9,7,0]
+length=len(l)
+print(length)
+print(l)
+l1=l[0]
+l.pop(l1)
+l.insert((length-1),l1)
+print(l)
+
+-------------------------
+str="World is infinite"
+print(str)
+v,c=0,0
+for i in range(0,len(str)):
+    if str[i] in "aeiou":
+        v+=1
+    elif str[i]==" ":
+        continue
+    else:
+        c+=1
+        
+print("no of vowels:",v)
+print("no of consonants:",c)
+---------------------
+
+str="World is infinite and we have to survive"
+l=str.split(" ")
+
+print(l)
+
+for n in l:
+    if n[0] in 'aeiou':
+       print(n)
+    
+---------------
+dic={"sulphur":16,"oxygen":8,"carbon":6,"nitrogen":7,"chlorine":17,"phosphorus":15}
+
+
+ele=input("enter element:")
+an=int(input("enter atomic number:"))
+if ele in dic:
+    if dic[ele]==an:
+       print("match found")
+       
+    else:
+        print("not found")
+else:
+    print("wrong element")
+       
+        
+
+-----------
+db={101:["roma",29,"delhi",50000],102:["smita",36,"haridwar",66000],
+103:["rahul",23,"rishikesh",52000],104:["rohit",21,"jammu",60000]}
+f=0
+chk=int(input("enter emp id:"))
+for i in db.items():
+  if chk in i:
+     print(i)
+     break
+  else:
+      f=1
+      
+if f==1:
+   print("id doesn't match")
+
+
+--------
+s=input("enter word:")
+for i in range(1,len(s)):
+    if(s[i]==s[0]):
+        s=s[0:i]+"@"+s[i+1:]
+print(s)
+-------
+
+#slicing
+str="welcome to pytthon"
+print(str[2,4])
+print(str[4:])
+print(str[:]
+print(str[0::2])
+str="welcome to pytthon"
+print(str[2:4])
+print(str[4:])
+print(str[:1])
+print(str[-9:-2])
+print(str[-2:])
+print(str[0::2])
+------------
+def func(l1):
+    a,b,c=0,0,0
+    for i in l1:
+        if int(i)>0:
+            a+=1
+        elif int(i)==0:
+            b+=1
+        else:
+            c+=1
+    return a,b,c
+    
+    
+l=input()
+l1=l.split()
+m,n,o=func(l1)
+print("positive:",m)
+print("negative:",o)
+print("zeroes:",n)
+------------------   
+
+8SEPTEMBER:-----------------------------------------------------------
+
+def sales(l):
+    a,b,c=0,0,0
+    
+    for i in l:
+        if i<200:
+            a+=1
+        elif i>=200 and i<500:
+            b+=1
+        else:
+            c+=1
+    return a,b,c
+l=[290,768,33,465,123,456,789,900,123,45,34]
+m,n,o=sales(l)    
+print("sales more than 200:",m)
+print("sales between 200 and 500:",n)
+print("sales more than 500:",o)
+
+
+def prime(n):
+    flag=0
+    for i in range (2,n):
+        if n%i==0:
+            flag=1
+    return flag
+    
+n=int(input("enter a number:"))
+z=prime(n)
+if z==0:
+    print("prime")
+else:
+    print("not prime") 
+
+
+
+
+
+
+
+CLASSES & OBJECT------------------------------
+
+
+
+class Book:
+    bNo=0
+    bName=""
+    bPrice=0
+
+    def input(self):
+        self.bNo=int(input("enter book no "))
+        self.bName=input("enter ur name")
+        self.bPrice=int(input("enter ur price"))
+    def show(self):
+       print(self.bNo)
+       print(self.bName)
+       print(self.bPrice)
+
+    
+    def cal(self):
+       tPrice=self.bPrice*5
+       print(tPrice)
+       
+
+b1=Book()
+b1.input()
+b1.show()
+b1.cal()
+    
+
+
+class program:
+    p_id=0
+    p_desc=""
+    p_srn=0
+    
+    
+    def input(self):
+        self.p_id=int(input("enter program id:"))
+        self.p_desc=input("enter description:")
+        self.p_srn=int(input("enter serial no:"))
+    def output(self):
+        print("serial no:",self.p_srn)
+        print("program:",self.p_desc)
+        print("ID:",self.p_id)
+
+p=program()
+p.input()
+p.output()
+
+-----------------------------------------
+class employee:
+    e_id=0
+    e_name=""
+    e_dept=""
+    e_sal=0
+    nol=0
+    hra,cca,pf,lt,g_sal,n_sal=0,0,0,0,0,0
+    
+    
+    def input(self):
+        self.e_id=int(input("enter id:"))
+        self.e_name=input("enter name:")
+        self.e_sal=int(input("enter basic salary:"))
+        self.e_dept=input("enter department:")
+        self.nol=int(input("enter no of leaves:"))
+    def output(self):
+        e.salary()
+        print("ID:",self.e_id)
+        print("Name:",self.e_name)
+        print("net salary:",self.n_sal)
+        print("department:",self.e_dept)
+    def salary(self):
+        self.hra=0.10*self.e_sal
+        self.cca=0.12*self.e_sal
+        self.pf=0.05*self.e_sal
+        self.lt=self.nol*(self.e_sal/30)
+        self.g_sal=self.hra+self.cca+self.e_sal
+        self.n_sal=self.e_sal+self.g_sal-(self.pf+self.lt)
+      
+        
+        
+
+e=employee()
+e.input()
+e.output()
+
+CONSTRUCTOR----------------------------------------------------------
+
+
+
+class employee:
+    e_id=0
+    e_name=""
+    e_dept=""
+    e_sal=0
+    nol=0
+    hra,cca,pf,lt,g_sal,n_sal=0,0,0,0,0,0
+    
+    def __init__(self):
+        self.e_id=1000
+        self.e_name="RONIT"
+        self.e_sal=100000
+        self.e_dept="mech"
+        self.nol=0
+    def __init__(self,id,nm,s,d,nl):
+        self.e_id=id
+        self.e_name=nm
+        self.e_sal=s
+        self.e_dept=d
+        self.nol=nl
+    def input(self):
+        self.e_id=int(input("enter id:"))
+        self.e_name=input("enter name:")
+        self.e_sal=int(input("enter basic salary:"))
+        self.e_dept=input("enter department:")
+        self.nol=int(input("enter no of leaves:"))
+    def output(self):
+        e.salary()
+        print("ID:",self.e_id)
+        print("Name:",self.e_name)
+        print("net salary:",self.n_sal)
+        print("department:",self.e_dept)
+    def salary(self):
+        self.hra=0.10*self.e_sal
+        self.cca=0.12*self.e_sal
+        self.pf=0.05*self.e_sal
+        self.lt=self.nol*(self.e_sal/30)
+        self.g_sal=self.hra+self.cca+self.e_sal
+        self.n_sal=self.e_sal+self.g_sal-(self.pf+self.lt)
+      
+        
+        
+
+e=employee(102,"shreya",56000,"testing",0)
+#e.input()
+e.output()
+
+-------------------------------------------------
+
+class Person:
+    def input(self):
+        self._age=int(input("input ur age"))
+        self._name=input("input ur Name")
+        self._gender=input("input ur Gender ...")
+
+ 
+
+
+       
+    def show(self):
+        print(self._age)
+        print(self._name)
+        print(self._gender)
+
+ 
+
+ 
+
+ 
+
+class Student(Person):
+    def input1(self):
+        self.rollno=int(input("enter roll no "))
+        self.subject=input("enter subject")
+    def show1(self):
+        print(self.rollno)
+        print(self.subject)
+
+ 
+
+ 
+
+s1=Student()
+s1.input()
+s1.input1()
+s1.show()
+s1.show1()
+==============================================================
+cities=["delhi","mohali","chandigarh","delhi","mohali","shimla"]
+dict={}
+for i in range(0,len(cities)):
+    city=cities[i]
+    count=0;
+    for j in range (0,len(cities)):
+        if(city==cities[j]):
+            count+=1
+    dict[city]=count
+    
+print(dict)
+=============================================================
+
+a=int(input("enter a number:"))
+l=[]
+print("enter ",a," numbers:")
+for i in range(0,a):
+    n=int(input())
+    l.append(n)
+    
+print(l)
+    ===============================================
+
+
+l=[]
+n=1
+print("enter numbers:")
+while(n!=0):
+        n=int(input())
+        l.append(n)
+   
+
+    
+print(l)
+    
+
+===========================================
+
+a=int(input("enter a number:"))
+l=[]
+print("enter ",a," numbers:")
+for i in range(0,a):
+    n=int(input())
+    l.append(n)
+    
+
+n=set(l)
+    
+print(n)
+    
+======================================================
+book={"sql":20,"java":80,"c++":40,"c":300}
+n=input("enter book name:")
+for i in (book):
+    if(n==i):
+      a=int(input("enter no of books:"))
+      book[i]+=a
+
+
+print(book)
+
+===========================================================
+book={"sql":20,"java":80,"c++":40,"c":300}
+print("book list:")
+for i in book:
+   print(i)
+n=input("enter book name:")
+for i in (book):
+    if(n==i):
+      a=int(input("enter no of books:"))
+      book[i]+=a
+      print(book)
+      break
+
+    else:
+        print("ths book isn't available")
+        break
+
+
+==========================================================
+
+
+import random
+l=["sheetal","hania","avani","ritika","atulya","karishma"]
+lucky=[]
+c=0
+while(c<3):
+  a=random.randint(0,len(l)-1)
+  
+  if(l[a] not in lucky):
+     lucky.append(l[a])
+     c+=1
+     
+  else:
+     continue
+ 
+
+print(lucky)
