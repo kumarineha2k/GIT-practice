@@ -1,0 +1,98 @@
+<html>
+<head>
+
+</head>
+
+
+<style>
+h2
+{
+align:center;
+color:brown;
+margin-top:50px;
+}
+
+div
+{
+height:450px;
+width:400px;
+border:black solid 1px;
+background-color:palegoldenrod;
+margin-left:500px;
+margin-top:100px;
+border-radius:10px;
+}
+
+.a
+{
+width:150px;
+height:30px;
+border:20px 10px 5px;
+border-radius:10px;
+}
+
+p
+{
+color:olive;
+}
+
+body
+{
+background-image:url("indiagate.png");
+}
+
+
+</style>
+
+
+
+<script>
+
+function sum()
+{
+alert("hI");
+let a=document.getElementById("t1").value;   
+let b=document.getElementById("t2").value;
+let c=document.getElementById("t3").value;
+
+let d=parseInt(a)+parseInt(b)-parseInt(c);
+document.getElementById("t4").innerHTML=d;  
+}
+
+
+</script>
+
+
+
+<hr></hr>
+
+<div align="center">
+ <h2 align="center">PAY SLIP</h2>     
+<table>
+<tr><td><label>Employee ID:</label></td>
+<td><input class="a" type="text" ></input></td></tr>
+
+<tr><td><label>Name:</label></td>
+<td><input class="a" type="text"></input></td></tr>
+
+<tr><td><label>Basic Pay:</label></td>
+<td><input class="a" type="text" id="t1"></input></td></tr>
+
+<tr><td><label>HRA:</label></td>
+<td><input class="a" type="text" id="t2"></input></td></tr>
+
+<tr><td><label>PF:</label></td>
+<td><input class="a" type="text" id="t3"></input></td></tr>
+
+<p id="t4> </p>
+<tr><td><button onclick="sum()">GROSS</button></tr></td>
+</table>
+
+
+
+
+</div>
+
+<body >
+</body>
+</html>
